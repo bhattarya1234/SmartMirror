@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartMirror</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel ="icon" href="icon.png" type="image/x-png">
+</head>
+<body>
+
+
+    <div id="container">
+      <img src = "todo.png" id="todoChild" onclick="hideTodo()">
+
+    <div id="timeContainer">
+    <div id="time">2:11</div>
+    <div id="date"></div>
+    <div class="day"></div>
+    <div id="country"></div>
+    <h1 style="text-shadow: 1px 1px 0 rgb(42, 42, 255),-1px 1px 0 rgb(40, 255, 140),1px 1px 0 rgb(137, 255, 34);margin-top: 10vh;">Greetings! Hero</h1>
+
+    </div>
+      <div id="localContainer">
+   
+        <img id = "WeatherIco" src="6386604.png" alt="Weather" title="">
+              <div class="Weather_info">
+     <div id ="subTemp"></div>
+    </div>   
+     <div class="Weather_info">
+     <div id ="Humidity"></div>
+    </div>
+  </div>
+<img class="cool-player" src = "sound-8825.gif" height="100"></img> 
+
+    <div id="quotes">
+    </div>
+    <div id="author"></div>
+   
+        <!--todo part here======================================================-->
+   
+    <div id = "todo" style="display: none;">
+<br><br><br><br>
+       <div id="form">
+             <div id="inputcontainer">
+    <input type="text" id="main" placeholder="Insert task">
+     <button id = 'btn' type="button"><i class="fa-solid fa-circle-check"></i></button>
+    </div>
+           <div id="task"></div>
+
+</div>
+</div>
+    </div>
+<script>
+  //==========================================================
+var btn = document.getElementById('btn');
+var task = document.getElementById('task');
+var space = "     "
+
+btn.addEventListener('click', function (event) {
+      event.preventDefault();
+      task.style.display = 'flex';
+      var list = document.getElementById('main').value;
+      if (!list) { alert('Empty field defined !'); return; }
+
+      var element = document.createElement('span');
+      element.classList.add('element');
+            element.textContent = `${list}`;
+      var delbutton = document.createElement('button');
+      delbutton.classList.add('delete');
+      delbutton.innerHTML =`<i class="fa-solid fa-trash"></i>`;
+
+      var editbutton = document.createElement('button');
+      editbutton.classList.add('edit');
+      editbutton.innerHTML = `<i class="fa-solid fa-pen-to-square"></i>`;
+
+      element.appendChild(delbutton);
+      element.appendChild(editbutton);
+      task.appendChild(element);
+
+      delbutton.addEventListener('click', function (event) {
+            event.preventDefault();
+            element.remove();
+      })
+
+      editbutton.addEventListener('click', function (event) {
+            event.preventDefault();
+            var newTask = prompt('Prompt new task: ');
+            if (!newTask || newTask.trim() == "") return;
+            if (title) {
+                  element.textContent = `${title} : ${space}${newTask}`;
+            }
+            else {
+                  element.textContent = newTask;
+
+            }
+            element.appendChild(editbutton);
+            element.appendChild(delbutton);
+
+      })
+})
+
+</script>
+<audio src ="" id = "audio"></audio>
+
+</body>
+</html>

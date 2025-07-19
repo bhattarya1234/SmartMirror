@@ -1,0 +1,288 @@
+*{
+    margin:.8%;
+    padding: 0;
+    box-sizing: border-box;
+user-select: none;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    min-height: 100vh;
+    background: rgb(20, 25, 47);
+}
+#container{
+ min-height: 100vh;
+ position: relative;
+ width:100% ;
+}
+#timeContainer{
+    position: absolute;
+    height: 55vh;
+    top: 0;
+    left: 0;
+    width: 50%;
+    /*background: #27274a;*/
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+/* box-shadow: 0 0 10px #27274a,
+0 0 20px #27274a; */
+
+border-right: 2px solid black;
+    padding:5vh;
+
+}
+#time,#date{
+color:blueviolet;
+font-size: 4vh;
+    font-family: cursive;
+
+}
+.day,#country{
+    font-size: 3vh;
+    font-family: cursive;
+}
+#localContainer{
+   position: absolute;
+    height: 30vh;
+    top: 0;
+    right: 0;
+    width: 50%;
+    /*background: #27274a;*/
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+/* box-shadow: 0 0 10px #27274a,
+0 0 20px #27274a; */
+
+    padding:5vh;
+ 
+}
+#WeatherIco{
+    height:25vh;
+width: 25%;
+
+}
+#todoChild{
+    margin-top:40%;
+    height: 10vh;
+    border-radius: 11px;
+    box-shadow: 0 0 10px #27274a,
+        0 0 20px #27274a;
+}
+#quotes{
+    position: absolute;
+    bottom:0;
+    right:0;
+    margin-bottom:20vh;
+     /* background: #27274a; */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+box-shadow: 0 0 10px #27274a,
+0 0 20px #27274a;
+border-radius: 11px;
+padding: 5vh;
+width:50%;
+}
+#author{
+     position: absolute;
+      bottom:-5vh;
+    right:0;
+    margin-bottom:20vh;
+     background:rgb(20, 25, 47);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width:15%;
+
+ z-index: 1;
+ border-radius: 12px;
+ padding:2.2vh;
+ border-bottom: 2px solid blue
+}
+.Weather_info{
+    position: relative;
+ background:rgba(0, 0, 0, 0.486);
+ display: flex;
+justify-items: center;
+ border-radius: 10px;
+width:50%;
+min-height: 5vh;
+}
+#subTemp,#Humidity{
+    position: absolute;
+     background:rgb(27, 33, 68);
+ border-bottom-left-radius: 10px;
+ border-top-left-radius: 10px;
+min-height: 5vh;
+z-index: 1;
+}
+#subTemp{
+    width:0%;
+    color:rgb(255, 0, 0);
+}
+#Humidity{
+    width:0%;
+    background: rgba(44, 171, 255, 0.779);
+    
+}
+#cool-player {
+  width: 20%;
+  border-radius: 11px;
+  display: none;
+}
+
+/*-----------------------------------------------------*/
+
+
+#main {
+bottom:100%;
+    position: absolute;
+    width: 150%;
+    height: 60px;
+    box-sizing: border-box;
+    background: rgb(31, 31, 31);
+    border: 3px solid #282828;
+    line-height: 1.1vh;
+    word-spacing: 1.1vh;
+    letter-spacing: 1.05vh;
+    color: rgb(114, 117, 117);
+border-radius: 20px;
+}
+
+#main:focus,
+#title:focus,#main:hover,#main:active{
+    outline: none;
+    background: #282828;
+}
+
+#inputcontainer {
+    position: relative;
+    width: 50%;
+    max-width: 50%;
+    height: 70px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#form,
+form {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+
+}
+
+#btn {
+
+    position: absolute;
+    left: 100%;
+bottom:100%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    width: 35%;
+    height: 60px;
+    background: blueviolet;
+    box-shadow: 0 0 10px blueviolet,
+        0 0 20px blueviolet;
+    border-start-end-radius: 20px;
+    border-end-end-radius: 20px;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#task {
+    display: flex;
+       position: relative;
+    flex-direction: column;
+    align-items: center;
+        min-height: 10vh;
+    height: auto;
+    width: 70%;
+    margin: 10px;
+    border-radius: 11px;
+}
+
+.element {
+
+    display: flex;
+    align-items: center;
+ color: #00ff7b;
+ font-size:small;
+    width: 100%;
+    min-height: 10vh;
+    height: auto;
+    background:rgb(41, 46, 43);
+    border-radius: 11px;  
+border-top:2px solid rgba(0, 0, 0, 0.064);
+border-bottom:2px solid rgba(0, 0, 0, 0.02);
+animation:taskFloat 1s linear infinite;
+overflow:auto;
+margin: .5vh;
+}
+
+.delete {
+    position: absolute;
+    right: 10%;
+    border-radius: 7px;
+    background: rgb(10, 93, 160);
+    padding: 4px;
+    cursor: pointer;
+    z-index: 1;
+    border: none;
+    margin-right: 3vh;
+    
+}
+
+.edit {
+    position: absolute;
+    right: 0;
+    border: none;
+    border-radius: 7px;
+    background: rgb(10, 93, 160);
+    padding: 4px;
+    cursor: pointer;
+       z-index: 1;
+       border-left: 2px solid rgb(0, 1, 1);
+}
+#btn:hover{
+    background: rgb(17, 200, 169);
+    box-shadow: 0 0 10px rgb(17, 200, 169),
+        0 0 20px rgb(17, 200, 169);
+transform: scale(1.04);
+}
+@keyframes taskFloat{
+    0%{
+        transform: translatey(1px);
+    }
+     50%{
+        transform: translatey(-1px);
+    }
+     100%{
+        transform: translatey(1px);
+    }
+}
+#todo{
+    position: absolute;
+    left:10%;
+   top:40%;
+height: 60vh;
+width:40%;
+background: rgba(0, 0, 0, 0.406);
+border-radius: 11px;
+overflow-x: hidden;
+
+}
